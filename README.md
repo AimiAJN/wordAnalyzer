@@ -32,3 +32,39 @@ analyzeWord() {
     }
   });
 }
+//Done by Khairun Nuwwarah (1520982)
+render() {
+    return (
+      <View style={styles.container}>
+        <Text>WORD ANALYZER</Text>
+        <Text></Text>
+        <TextInput onChangeText={(word)=>this.setState({word})} placeholder="Insert Word"/> 
+        <Button onPress={() => this.analyzeWord()} title="Analyze"></Button>      
+        <Text>Word : {this.state.word}</Text>
+        <Text>No of Consonants : {this.state.countCons}</Text>
+        <Text>No of Vowels : {this.state.countVow}</Text>
+        <Text>No of Characters : {this.state.countChar}</Text>
+        {/* <Text>{this.state.array.length}</Text> */}
+    </View>
+    );
+  }
+}
+
+const styles = StyleSheet.create({
+  container: {
+    flex: 1,
+    justifyContent: 'center',
+    alignItems: 'center',
+    backgroundColor: '#F5FCFF',
+  },
+  welcome: {
+    fontSize: 20,
+    textAlign: 'center',
+    margin: 10,
+  },
+  instructions: {
+    textAlign: 'center',
+    color: '#333333',
+    marginBottom: 5,
+  },
+});
